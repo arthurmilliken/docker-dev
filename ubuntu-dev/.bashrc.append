@@ -1,0 +1,6 @@
+
+# Personal additions
+export PS1='\e[0;92m[\u@\h: \w]\e[m$(__git_ps1)\n\$ '  # bash prompt
+LS_COLORS=$LS_COLORS'di=0;36:'; export LS_COLORS       # ls colors
+source /etc/bash_completion.d/git-prompt               # git completion
+GIT_PS1_SHOWDIRTYSTATE=true                            # git dirty state
