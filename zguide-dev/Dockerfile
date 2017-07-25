@@ -1,12 +1,8 @@
 FROM arthurmilliken/ubuntu-dev
 
-USER root
-
 RUN apt-get update && apt-get install -y \
-	nodejs
+	ruby-full
 
-RUN npm install -g node-gyp
-
-USER super
+WORKDIR /opt
 
 ENTRYPOINT bash

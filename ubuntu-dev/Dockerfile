@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y \
+USER root
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	autoconf \
 	automake \
 	autotools-dev \
@@ -11,12 +13,26 @@ RUN apt-get update && apt-get install -y \
 	git \
 	libpcre3-dev \
 	libtool \
+	make \
 	pkg-config \
+	python \
 	uuid-dev \
 	valgrind \
 	vim \
 	wget
 
+RUN apt-get install sudo -y
+
+# Setup User
+RUN useradd --home /home/super -m super -K UID_MIN=10000 -K GID_MIN=10000 -s /bin/bash
+# RUN mkdir /home/super
+RUN chown super:super /home/super
+RUN adduser super sudo
+RUN echo 'super ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER super
+
+# Configure Git
 RUN git config --global credential.helper store && \
 	git config --global push.default simple && \
 	git config --global alias.co checkout && \
@@ -24,10 +40,8 @@ RUN git config --global credential.helper store && \
 	git config --global alias.ci commit && \
 	git config --global alias.st status
 
-COPY .vimrc .bashrc.append /root/
+COPY .vimrc .bashrc.append /home/super/
 
-RUN cat /root/.bashrc.append >> /root/.bashrc
-
-WORKDIR /opt
+RUN cat ~/.bashrc.append >> ~/.bashrc
 
 ENTRYPOINT bash

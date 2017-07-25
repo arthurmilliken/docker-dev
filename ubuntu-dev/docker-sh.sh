@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/bash -x
 docker exec -it ubuntu-dev bash
