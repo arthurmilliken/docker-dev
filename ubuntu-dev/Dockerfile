@@ -15,7 +15,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	libtool \
 	make \
 	pkg-config \
-	python \
 	uuid-dev \
 	valgrind \
 	vim \
