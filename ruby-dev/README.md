@@ -1,5 +1,5 @@
-# docker-node-dev
-Docker image for NodeJS development on ubuntu
+# docker-ruby-dev
+Docker image for Ruby development on ubuntu
 
 ## to run container
 ```

@@ -5,7 +5,7 @@ USER root
 RUN apt-get update && apt-get install -y \
 	ruby-full
 
-USER super
+USER dev
 
 ENV RUBY_VERSION 2.3.3
 
@@ -20,3 +20,5 @@ RUN /bin/bash -l -c 'rvm requirements' && \
 	/bin/bash -l -c 'rvm use $RUBY_VERSION --default' && \
 	/bin/bash -l -c 'rvm rubygems current' && \
 	/bin/bash -l -c 'gem install bundler'
+
+ENTRYPOINT ["bash", "--login"]

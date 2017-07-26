@@ -23,16 +23,15 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 
 RUN apt-get install sudo -y
 
-# Setup User
-RUN useradd --home /home/super -m super -K UID_MIN=10000 -K GID_MIN=10000 -s /bin/bash
-# RUN mkdir /home/super
-RUN chown super:super /home/super
-RUN adduser super sudo
-RUN echo 'super ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+# Set up dev user
+RUN useradd --home /home/dev -m dev -K UID_MIN=10000 -K GID_MIN=10000 -s /bin/bash && \
+    chown dev:dev /home/dev && \
+    adduser dev sudo && \
+    echo 'dev ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-USER super
+USER dev
 
-# Configure Git
+# Configure git
 RUN git config --global credential.helper store && \
 	git config --global push.default simple && \
 	git config --global alias.co checkout && \
@@ -40,8 +39,11 @@ RUN git config --global credential.helper store && \
 	git config --global alias.ci commit && \
 	git config --global alias.st status
 
-COPY .vimrc .bashrc.append /home/super/
-
+# Customize startup scripts
+COPY .vimrc .bashrc.append /home/dev/
 RUN cat ~/.bashrc.append >> ~/.bashrc
 
-ENTRYPOINT bash
+WORKDIR /opt
+
+ENTRYPOINT ["bash", "--login"]
+
