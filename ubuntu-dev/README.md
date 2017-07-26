@@ -14,7 +14,7 @@ PORT_SSL=3001
 ./docker-start.sh
 ```
 
-## to start a shell within a running container
+## to start a shell in a running container
 ```
 ./docker-sh.sh
 ```

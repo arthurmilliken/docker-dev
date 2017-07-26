@@ -1,4 +1,4 @@
-FROM arthurmilliken/ubuntu-dev
+FROM arthurmilliken/ubuntu-dev:16.04
 
 USER root
 

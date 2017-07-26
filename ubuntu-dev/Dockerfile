@@ -43,7 +43,5 @@ RUN git config --global credential.helper store && \
 COPY .vimrc .bashrc.append /home/dev/
 RUN cat ~/.bashrc.append >> ~/.bashrc
 
-WORKDIR /opt
-
 ENTRYPOINT ["bash", "--login"]
 
