@@ -1,0 +1,4 @@
+
+# go-dev
+export GOPATH=/home/dev/go
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH

@@ -1,5 +1,9 @@
 # docker-ruby-dev
-Docker image for Ruby development on ubuntu
+Docker image for Ruby development on ubuntu. [Github](https://github.com/arthurmilliken/docker-dev/tree/master/ruby-dev)
+
+### tags
+
+- `latest`, `2.3.3` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/ruby-dev/Dockerfile)
 
 ## to run container
 ```

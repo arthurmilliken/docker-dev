@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
 	autoconf \
 	automake \
 	autotools-dev \
@@ -10,7 +10,10 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	build-essential \
 	cmake \
 	curl \
+	g++ \
+	gcc \
 	git \
+	libc6-dev \
 	libpcre3-dev \
 	libtool \
 	make \
@@ -20,7 +23,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	vim \
 	wget
 
-RUN apt-get install sudo -y
+RUN apt-get install -y sudo
 
 # Set up dev user
 RUN useradd --home /home/dev -m dev -K UID_MIN=10000 -K GID_MIN=10000 -s /bin/bash && \

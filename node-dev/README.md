@@ -1,5 +1,9 @@
 # docker-node-dev
-Docker image for NodeJS development on ubuntu
+Docker image for NodeJS development on ubuntu [Github](https://github.com/arthurmilliken/docker-dev/tree/master/node-dev)
+
+### tags
+
+- `latest`, `6` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/node-dev/Dockerfile)
 
 ## to run container
 ```
