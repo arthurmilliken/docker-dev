@@ -1,4 +1,4 @@
-# docker-node-dev
+# docker-go-dev
 Docker image for Golang development on ubuntu. [Github](https://github.com/arthurmilliken/docker-dev/tree/master/go-dev)
 
 ### tags
