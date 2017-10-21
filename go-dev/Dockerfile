@@ -4,9 +4,6 @@ USER root
 
 ENV GOLANG_VERSION 1.9.1
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
-	ca-certificates
-
 RUN set -eux; \
 	dpkgArch="$(dpkg --print-architecture)"; \
 	case "${dpkgArch##*-}" in \
