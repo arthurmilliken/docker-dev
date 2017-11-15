@@ -8,8 +8,6 @@ Docker image for development on ubuntu. [Github](https://github.com/arthurmillik
 ### to run container:
 
     LOCAL_SRC=/path/to/local/src
-    PORT=3000
-    PORT_SSL=3001
     ./docker-run.sh
 
 ### to resume container:
