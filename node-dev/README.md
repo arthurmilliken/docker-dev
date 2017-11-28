@@ -3,22 +3,23 @@ Docker image for NodeJS development on ubuntu [Github](https://github.com/arthur
 
 ### tags
 
-- `latest`, `6` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/node-dev/Dockerfile)
+- `latest`, `8` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/node-dev/v8/Dockerfile)
+- `6` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/node-dev/v6/Dockerfile)
 
-## to run container
+### to run container
 ```
-LOCAL_SRC=/path/to/local/src
-PORT=3000
-PORT_SSL=3001
+export LOCAL_SRC=/path/to/local/src
+export PORT=3000
+export PORT_SSL=3001
 ./docker-run.sh
 ```
 
-## to resume container
+### to resume container
 ```
 ./docker-start.sh
 ```
 
-## to start a shell in a running container
+### to start a shell in a running container
 ```
 ./docker-sh.sh
 ```
