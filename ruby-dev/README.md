@@ -7,9 +7,9 @@ Docker image for Ruby development on ubuntu. [Github](https://github.com/arthurm
 
 ## to run container
 ```
-LOCAL_SRC=/path/to/local/src
-PORT=3000
-PORT_SSL=3001
+export LOCAL_SRC=/path/to/local/src
+export PORT=3000
+export PORT_SSL=3001
 ./docker-run.sh
 ```
 

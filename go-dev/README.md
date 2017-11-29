@@ -7,8 +7,8 @@ Docker image for Golang development on ubuntu. [Github](https://github.com/arthu
 
 ### to run container
 ```
-GOPATH=/your/home/dir/go
-LOCAL_SRC=/path/to/local/src
+export GOPATH=/your/home/dir/go
+export LOCAL_SRC=/path/to/local/src
 ./docker-run.sh
 ```
 

@@ -7,7 +7,7 @@ Docker image for development on ubuntu. [Github](https://github.com/arthurmillik
 
 ### to run container:
 
-    LOCAL_SRC=/path/to/local/src
+    export LOCAL_SRC=/path/to/local/src
     ./docker-run.sh
 
 ### to resume container:
