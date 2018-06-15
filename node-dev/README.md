@@ -9,8 +9,8 @@ Docker image for NodeJS development on ubuntu [Github](https://github.com/arthur
 ### to run container
 ```
 export LOCAL_SRC=/path/to/local/src
-export PORT=3000
-export PORT_SSL=3001
+export PORT=8080
+export PORT_SSL=8443
 ./docker-run.sh
 ```
 
