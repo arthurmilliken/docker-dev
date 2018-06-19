@@ -11,5 +11,5 @@ RUN npm install -g node-gyp
 
 USER dev
 
-ENTRYPOINT ["bash", "--login"]
+CMD ["bash", "--login"]
 

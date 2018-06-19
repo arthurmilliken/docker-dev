@@ -49,5 +49,5 @@ COPY .vimrc .bashrc.append /home/dev/
 RUN cat ~/.bashrc.append >> ~/.bashrc
 WORKDIR /home/dev
 
-ENTRYPOINT ["bash", "--login"]
+CMD ["bash", "--login"]
 
