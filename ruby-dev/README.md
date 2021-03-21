@@ -3,7 +3,8 @@ Docker image for Ruby development on ubuntu. [Github](https://github.com/arthurm
 
 ### tags
 
-- `latest`, `2.3.3` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/ruby-dev/Dockerfile)
+- `3`, `latest` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/ruby-dev/v3/Dockerfile)
+- `2.3.3` [Dockerfile](https://github.com/arthurmilliken/docker-dev/blob/master/ruby-dev/v2.3.3/Dockerfile)
 
 ## to run container
 ```
@@ -22,4 +23,3 @@ export PORT_SSL=3001
 ```
 ./docker-sh.sh
 ```
-
